@@ -1,5 +1,5 @@
  $(document).ready(function() {
-    document.title = 'Madden PFL';
+    document.title = 'Madden Football';
 
     // Header
     $("#daddyleagues-menu").appendTo("#dl_nav");
