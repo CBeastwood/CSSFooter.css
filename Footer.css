@@ -1,10 +1,12 @@
- $(document).ready(function() 
+ $(document).ready(function() {
+    document.title = 'Madden PFL';
 
     // Header
     $("#daddyleagues-menu").appendTo("#dl_nav");
     $(".scorelist").appendTo("#dl_scorelist");
 
     $("#daddyleagues-menu .navbar .nav > li:contains('Chat')").remove();
+    $("#daddyleagues-menu .navbar .nav > li:contains('Forum')").remove();
     $("#daddyleagues-menu .navbar .nav > li:contains('Blog')").remove();
 
 
@@ -217,5 +219,8 @@ $('.playoffs td div:contains("On The Bubble")').parent().addClass("bubble");
         var injLength = injury.split(" ");
         $(this).replaceWith('<span class="label label-danger injuryBox" title="' + injury + '">' + injLength[injLength.length - 2] + " " + injLength[injLength.length - 1] + '</span>');
     });
+
+    $('.content .maincontent:contains("<rules/>")').replaceWith('<iframe style="width: 100%; height: 5000px;" src="http://yahoo.com"></iframe>');
+    $('.content .maincontent:contains("<forum/>")').replaceWith('<a href="http://maddenpfl.com/forums/">$1</a>');
 
 });
